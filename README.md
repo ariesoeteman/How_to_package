@@ -24,6 +24,8 @@ git init
 git clone 'your url'
 ```
 
+Then move inside your repo (i.e. with cd)
+
 #### 2) Setup a conda environment
 
 This is to create a shared environment that includes non-python packages, and maybe the python version itself
