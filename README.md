@@ -150,7 +150,8 @@ poetry install
 pre-commit install
 ```
 
+Now you can import your package in python, or just run your files as normal.
+Make sure that you use the python version that was created by Poetry (my Visual Studio selected another Python version by default)
 Note that you can always update your .toml, and run 'poetry update' to lock in your changes.
 
 Enjoy your project
-
