@@ -20,6 +20,7 @@ https://github.com/your-username/your-repository.git
 
 On your local terminal, go to your desired foler and run
 ```
+git init
 git clone 'your url'
 ```
 
