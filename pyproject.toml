@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "my_package"
+version = "0.0.0"
+description = "Very important package"
+authors = [Me"]
+readme = "README.md"
+packages = [{include = "my_package"}]
+
+[tool.poetry-dynamic-versioning]
+enable = true
+dirty = true
+
+[tool.poetry.dependencies]
+python = "~3.10"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
+pre-commit = "^2.20.0"
+black = "^22.12.0"
+isort = "^5.12.0"
+sphinx = "^4"
+sphinx-book-theme = "^0.3.3"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = 'black'
+
+[tool.pytest.ini_options]
+testpaths = ["unit_tests"]
+addopts = [
+    "--import-mode=importlib",
+]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "serial",
+    "new: easy way to mark some tests you are currently working on",
+]
+
+ignore_missing_imports = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
